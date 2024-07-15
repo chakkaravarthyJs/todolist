@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(225, 236, 231);
+        }
+        .parallax{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #txt{
+            position: relative;
+            font-size: 5rem;
+            color: rgb(38, 154, 38);
+        }
+        .parallax img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #con{
+            position: relative;
+            background-color: rgb(18, 79, 40);
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax">
+        <img src="hill1.png" id="hill1">
+        <img src="hill2.png" id="hill2">
+        <img src="hill3.png" id="hill3">
+        <img src="hill4.png" id="hill4">
+        <img src="hill5.png" id="hill5">
+        <img src="tree.png"  id="tree">
+        <h1 id="txt">FOREST</h1>
+        <img src="leaf.png"  id="leaf">
+        <img src="plant.png" id="plant">
+    </div>
+    <div id="con">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde necessitatibus aliquid eos odit earum dolore recusandae facilis cupiditate? Id fugiat similique dolorum at qui ex, totam ut laudantium nostrum fugit tempora adipisci dolor eligendi obcaecati deleniti consequuntur, recusandae quae ipsum officia nesciunt veniam expedita porro! Ratione, consequatur minus autem nihil recusandae voluptate rerum id explicabo veniam vitae, repellendus tempora suscipit. Eveniet cum sed unde totam in necessitatibus numquam sequi. Nihil molestias magni nisi aut nemo dolorum, quibusdam voluptatem asperiores! Ea ab quae nulla tenetur cupiditate eius. Minus magnam sit dolorum sequi iure ex consequatur soluta nostrum nobis magni est autem animi, quae pariatur dolorem eum eaque dolores tempora assumenda illo. Omnis, est in. Eligendi asperiores molestias quibusdam officia earum inventore ipsam repudiandae voluptas, eum ut consequatur aliquid recusandae nemo quam officiis dolorum similique assumenda dicta perspiciatis qui, ea illo omnis at! Recusandae distinctio provident nobis accusamus expedita necessitatibus, iste dignissimos modi fugiat earum blanditiis enim. Placeat modi eos rerum obcaecati deleniti dolore ex incidunt repellendus sed voluptates corporis exercitationem, quam, dolorem quia. Atque suscipit dolore molestiae vel ipsa minus quam recusandae iure velit ut consequatur labore inventore et rerum tenetur vitae, accusantium perspiciatis iusto voluptatem animi eius assumenda. Necessitatibus nulla dignissimos totam iusto maxime, et amet deleniti illo ea exercitationem enim numquam suscipit aliquid vel mollitia harum minima nam omnis minus itaque. Sunt blanditiis earum temporibus. Ab, recusandae numquam. Voluptatum, adipisci minus! Inventore, perspiciatis eum iure vitae suscipit magni impedit, error consequatur esse distinctio consequuntur ullam reprehenderit officiis obcaecati accusamus voluptatum. Omnis sapiente enim ut. Aperiam explicabo inventore fugit repellendus nulla quo non veniam, aliquam delectus quaerat cupiditate ut aut voluptatum temporibus incidunt. Quae dolorem, tempora impedit cum numquam, porro a aliquid sapiente animi maxime obcaecati mollitia vitae quam possimus nobis odio accusantium nihil iusto pariatur inventore ipsa ea qui? In, repudiandae sint! Beatae repellat aliquid delectus, quaerat alias labore rerum consequatur odio consectetur. Voluptas impedit saepe, laborum quam error et a tenetur fuga pariatur dolores ipsam explicabo architecto non voluptate illo inventore quasi placeat consequuntur sint ipsa reiciendis repellat cum. Itaque facilis quasi quidem assumenda debitis, quisquam unde. Sequi, totam ipsum possimus sit incidunt aliquam facere ut aspernatur enim nostrum placeat dicta quod est blanditiis sapiente atque porro voluptatem sunt deleniti eius aliquid optio modi qui reiciendis? Omnis quaerat et blanditiis cumque, mollitia accusamus, asperiores nihil quis, recusandae quas commodi distinctio debitis? Voluptates nobis ut ipsam itaque officia architecto.</p>
+        <br>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi fuga eveniet at voluptatibus, soluta, quos ipsam voluptate similique consequuntur nisi iusto ullam ex, nihil ut sed placeat! Fugit illum soluta numquam cupiditate nisi nostrum delectus dolorem. Natus nihil laborum, minima delectus ipsa sit laboriosam suscipit dolore. Ea labore molestias aliquid assumenda. Dolorum alias laboriosam omnis consequatur temporibus modi. Reiciendis, excepturi optio non molestiae repellendus accusantium doloremque blanditiis eligendi aliquam itaque assumenda corrupti possimus facilis, quod cupiditate voluptatem ex consequatur doloribus reprehenderit commodi quo saepe ipsam fugit enim. Voluptatibus odit, facere facilis dolorem tempora neque nulla, quia vero quidem, illum unde?</p>
+        <br>
+    </div>
+    <script>
+        let hill1 = document.getElementById("hill1")
+        let hill4 = document.getElementById("hill4")
+        let hill5 = document.getElementById("hill5")
+        let leaf = document.getElementById("leaf")
+        let tree = document.getElementById("tree")
+        let txt = document.getElementById("txt")
+        let plant = document.getElementById("plant")
+        window.addEventListener("scroll",()=>{
+            let a  = window.scrollY;
+            console.log(a);
+            txt.style.top = a*0.5 +"px";
+            leaf.style.left = a*1.2 + "px";
+            hill1.style.top = a*0.7 +"px"
+            hill4.style.left = -a*0.2 +"px"
+            hill5.style.left = a*0.6 +"px"
+        })
+    </script>
+</body>
+</html>
